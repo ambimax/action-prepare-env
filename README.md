@@ -1,1 +1,42 @@
 # action-prepare-env
+
+## Introduction
+
+This github action will let you prepare some commonly used variables as outputs that can be referenced in later steps.
+
+## Example
+
+<!-- region:example-code start -->
+
+```yaml
+- id: prepare-env
+  uses: ambimax/action-prepare-env@v1.6.0
+
+- run: echo ${{ steps.prepare-env.outputs.escaped_branch_name }}
+```
+
+<!-- region:example-code end -->
+
+## Available outputs
+
+### branch_name
+
+The name of the current branch. Works for both `on: push` and `on: pull_request` triggers.
+
+### escaped_branch_name
+
+An escaped version of `branch_name` that can be safely used to construct deployment names.
+
+This name is guaranteed to not be longer than 16 characters and will not contain any characters except `a-z`, `A-Z` or `-`. All leading and trailing `-` will be removed to prevent deployment names with `--`. The name will also contain a 4 character hash code (included in the 16 character limit) to prevent collisions with branches that generate the same name.
+
+#### Examples
+
+| branch_name              | escaped_branch_name |
+| ------------------------ | ------------------- |
+| PROJECT-5-add-some-stuff | PROJECT-5-a-8f07    |
+| fix/remove-some-bug      | fix-remove-553b     |
+| -----branch-----         | branch-8944         |
+
+## Maintainer
+
+- [Tobias Faust](https://github.com/FaustTobias), [ambimax® GmbH](https://www.ambimax.de/)

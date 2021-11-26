@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2019",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "useUnknownInCatchVariables": true,
+        "noEmit": true,
+        "preserveWatchOutput": true
+    },
+    "include": ["src/**/*"]
+}
