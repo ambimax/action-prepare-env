@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  build-and-release:
+    name: Build and release
+    runs-on: ubuntu-latest
+    concurrency: ci-lint-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+          cache: "yarn"
+
+      - run: yarn
+
+      - run: yarn check
+
+      - run: yarn build
+
+      - run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}

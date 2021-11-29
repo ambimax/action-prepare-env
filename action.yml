@@ -1,0 +1,17 @@
+name: Prepare environment
+description: Prepare some commonly used variables.
+
+outputs:
+  branch_name:
+    description: The name of the current branch.
+
+  escaped_branch_name:
+    description: An escaped version of `branch_name` that can be safely used to construct deployment names.
+
+branding:
+  icon: "gift"
+  color: "blue"
+
+runs:
+  using: "node12"
+  main: "dist/main.js"
