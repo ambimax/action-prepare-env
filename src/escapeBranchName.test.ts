@@ -27,11 +27,11 @@ const fixtures = [
     },
     {
         input: "GH-20 keep upper and lower case",
-        output: "GH-20-keep-6ac9",
+        output: "gh-20-keep-6ac9",
     },
     {
         input: "GH-20 keep upper and lower CASE",
-        output: "GH-20-keep-bb47",
+        output: "gh-20-keep-bb47",
     },
 ];
 

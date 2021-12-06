@@ -15,5 +15,7 @@ export function escapeBranchName(name: string | undefined) {
             .replace(/^-+/g, "")
             .slice(0, maxLength - 1 - hashLength)
             .replace(/-+$/g, "") + `-${hash.slice(0, hashLength)}`
-    ).replace(/^-+/g, "");
+    )
+        .replace(/^-+/g, "")
+        .toLowerCase();
 }

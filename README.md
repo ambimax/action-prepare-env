@@ -33,7 +33,7 @@ This name is guaranteed to not be longer than 16 characters and will not contain
 
 | branch_name              | escaped_branch_name |
 | ------------------------ | ------------------- |
-| PROJECT-5-add-some-stuff | PROJECT-5-a-8f07    |
+| PROJECT-5-add-some-stuff | project-5-a-8f07    |
 | fix/remove-some-bug      | fix-remove-553b     |
 | -----branch-----         | branch-8944         |
 
