@@ -6,7 +6,10 @@ console.log("GITHUB_HEAD_REF", process.env.GITHUB_HEAD_REF);
 console.log("GITHUB_REF", process.env.GITHUB_REF);
 
 const ref = process.env.GITHUB_HEAD_REF ?? process.env.GITHUB_REF;
-const branchName = ref?.slice(11);
+let branchName = ref;
+if (branchName?.startsWith("refs/heads/")) {
+    branchName = branchName.slice(11);
+}
 const escapedBranchName = escapeBranchName(branchName);
 
 console.log("Outputs:");
