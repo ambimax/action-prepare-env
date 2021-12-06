@@ -1,7 +1,7 @@
 import core from "@actions/core";
 import { escapeBranchName } from "./escapeBranchName";
 
-const ref = core.getInput("github_ref") ?? process.env.GITHUB_HEAD_REF ?? process.env.GITHUB_REF;
+const ref = process.env.GITHUB_HEAD_REF ?? process.env.GITHUB_REF;
 const branchName = ref?.slice(11);
 const escapedBranchName = escapeBranchName(branchName);
 

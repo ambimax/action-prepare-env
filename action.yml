@@ -1,12 +1,6 @@
 name: Prepare environment
 description: Prepare some commonly used variables.
 
-inputs:
-  github_ref:
-    description: The GitHub ref
-    default: ${{ github.ref }}
-    required: false
-
 outputs:
   branch_name:
     description: The name of the current branch.
