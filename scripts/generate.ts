@@ -15,10 +15,10 @@ import { replaceMarkdownRegion } from "./util/replaceMarkdownRegion";
 
     const exampleCode = codeBlock`
         \`\`\`yaml
-        - id: prepare-env
+        - id: env
           uses: ambimax/action-prepare-env@${gitTag}
 
-        - run: echo \${{ steps.prepare-env.outputs.escaped_branch_name }}
+        - run: echo \${{ steps.env.outputs.escaped_branch_name }}
         \`\`\`
     `;
 
