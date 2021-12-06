@@ -21,7 +21,7 @@ This github action will let you prepare some commonly used variables as outputs 
 
 ### branch_name
 
-The name of the current branch. Works for both `on: push` and `on: pull_request` triggers.
+The name of the current (or deleted) branch. Works for both `on: push`, `on: pull_request` and `on: delete` triggers.
 
 ### escaped_branch_name
 
