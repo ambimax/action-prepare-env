@@ -1,6 +1,22 @@
 name: Prepare environment
 description: Prepare some commonly used variables.
 
+inputs:
+  event_name:
+    description: The GitHub event name
+    default: ${{ github.event_name }}
+    required: false
+
+  ref_type:
+    description: The GitHub ref type
+    default: ${{ github.event.ref_type }}
+    required: false
+
+  ref:
+    description: The GitHub ref
+    default: ${{ github.event.ref }}
+    required: false
+
 outputs:
   branch_name:
     description: The name of the current branch.
