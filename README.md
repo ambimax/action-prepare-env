@@ -9,10 +9,10 @@ This github action will let you prepare some commonly used variables as outputs 
 <!-- region:example-code start -->
 
 ```yaml
-- id: prepare-env
+- id: env
   uses: ambimax/action-prepare-env@v1.0.4
 
-- run: echo ${{ steps.prepare-env.outputs.escaped_branch_name }}
+- run: echo ${{ steps.env.outputs.escaped_branch_name }}
 ```
 
 <!-- region:example-code end -->
@@ -27,7 +27,7 @@ The name of the current (or deleted) branch. Works for both `on: push`, `on: pul
 
 An escaped version of `branch_name` that can be safely used to construct deployment names.
 
-This name is guaranteed to not be longer than 16 characters and will not contain any characters except `a-z`, `A-Z` or `-`. All leading and trailing `-` will be removed to prevent deployment names with `--`. The name will also contain a 4 character hash code (included in the 16 character limit) to prevent collisions with branches that generate the same name.
+This name is guaranteed to not be longer than 16 characters and will not contain any characters except `a-z`, `0-9`, or `-`. All leading and trailing `-` will be removed to prevent deployment names with `--`. The name will also contain a 4 character hash code (included in the 16 character limit) to prevent collisions with branches that generate the same name.
 
 #### Examples
 
