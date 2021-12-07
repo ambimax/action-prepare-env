@@ -1,5 +1,7 @@
 # action-prepare-env
 
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository) [![CI](https://github.com/ambimax/action-prepare-env/actions/workflows/ci.yml/badge.svg)](https://github.com/ambimax/action-prepare-env/actions/workflows/ci.yml) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 ## Introduction
 
 This github action will let you prepare some commonly used variables as outputs that can be referenced in later steps.
