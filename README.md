@@ -12,7 +12,7 @@ This github action will let you prepare some commonly used variables as outputs 
 
 ```yaml
 - id: env
-  uses: ambimax/action-prepare-env@v1.0.6
+  uses: ambimax/action-prepare-env@v1.1.0
 
 - run: echo ${{ steps.env.outputs.escaped_branch_name }}
 ```
