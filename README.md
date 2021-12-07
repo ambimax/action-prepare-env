@@ -25,6 +25,14 @@ This github action will let you prepare some commonly used variables as outputs 
 
 The name of the current (or deleted) branch. Works for both `on: push`, `on: pull_request` and `on: delete` triggers.
 
+### branch_hash
+
+The SHA-256 hash of `branch_name`.
+
+### branch_hash_short
+
+A short version of `branch_hash`. The length is trimmed to 8 characters.
+
 ### escaped_branch_name
 
 An escaped version of `branch_name` that can be safely used to construct deployment names.
