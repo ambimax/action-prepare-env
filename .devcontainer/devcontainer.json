@@ -1,0 +1,11 @@
+{
+    "name": "Node.js",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": { "VARIANT": "16-bullseye" }
+    },
+    "settings": {},
+    "remoteUser": "node",
+    "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "EditorConfig.EditorConfig", "orta.vscode-jest"],
+    "postCreateCommand": "./.devcontainer/setup.sh"
+}

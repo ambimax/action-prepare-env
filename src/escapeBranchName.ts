@@ -1,4 +1,4 @@
-import crypto from "crypto";
+import { sha256 } from "./util";
 
 export function escapeBranchName(name: string | undefined) {
     if (name === undefined) {
@@ -7,7 +7,7 @@ export function escapeBranchName(name: string | undefined) {
 
     const maxLength = 16;
     const hashLength = 4;
-    const hash = crypto.createHash("sha256").update(name).digest("hex");
+    const hash = sha256(name);
 
     return (
         name
