@@ -1,0 +1,6 @@
+{
+    "editor.rulers": [120],
+    "jest.testExplorer": {
+        "enabled": true
+    }
+}
